@@ -31,4 +31,6 @@
 *.out
 *.app
 
+#ignores the compiled code
 cimg
+/src/cimg

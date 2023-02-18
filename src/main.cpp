@@ -6,7 +6,7 @@
 #include <opencv2/opencv.hpp>
 #include <unistd.h>
 
-int main()
+int main(int argc, char** argv)
 {
     char cwd[1024];
     if (getcwd(cwd, sizeof(cwd)) == NULL) {
@@ -15,8 +15,13 @@ int main()
     }
 
     std::string filename;
-    std::cout << "Enter the filename of the image to display: ";
-    std::cin >> filename;
+
+    if (argc > 1) {
+        filename = std::string(argv[1]);
+    } else {
+        std::cout << "Usage: " << argv[0] << " <filename>" << std::endl;
+        return -1;
+    }
 
     // Create the full file path
     std::string full_path = std::string(cwd) + "/" + filename;
@@ -31,7 +36,7 @@ int main()
     }
 
     // Create a window to display the image
-    cv::namedWindow("Display window", cv::WINDOW_AUTOSIZE);
+    cv::namedWindow("Display window", cv::WINDOW_NORMAL);
 
     // Show the image in the created window
     cv::imshow("Display window", image);
