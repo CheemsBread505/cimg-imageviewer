@@ -36,7 +36,7 @@ int main(int argc, char** argv)
 
     // Create a window to display the image
     cv::namedWindow("cimg - image viewer", cv::WINDOW_NORMAL);
-
+    
     // Show the image in the created window
     cv::imshow("cimg - image viewer", image);
     cv::waitKey(0);
