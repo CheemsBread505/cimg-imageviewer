@@ -1,4 +1,4 @@
-# cimg
+# cimg-imageviewer
 
 **Usage**
 The syntax of cimg is very simple and will look common if your a seasoned linux user. 
