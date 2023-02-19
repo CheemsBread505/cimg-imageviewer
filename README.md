@@ -13,7 +13,7 @@ ___
 
 Clone the repo and cd into it's directory.
 
-    git clone git clone https://github.com/CheemsBread505/cimg-imageviewer.git && cd cimg
+    git clone git@github.com:CheemsBread505/cimg-imageviewer.git && cd cimg-imageviewer
 Make the install script runnable.
 
     chmod +x install.sh
