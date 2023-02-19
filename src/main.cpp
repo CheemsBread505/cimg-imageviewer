@@ -23,7 +23,6 @@ int main(int argc, char** argv)
         return -1;
     }
 
-    // Create the full file path
     std::string full_path = std::string(cwd) + "/" + filename;
 
     // Load the image from file
@@ -36,12 +35,10 @@ int main(int argc, char** argv)
     }
 
     // Create a window to display the image
-    cv::namedWindow("Display window", cv::WINDOW_NORMAL);
+    cv::namedWindow("cimg - image viewer", cv::WINDOW_NORMAL);
 
     // Show the image in the created window
-    cv::imshow("Display window", image);
-
-    // Wait for a keystroke in the window
+    cv::imshow("cimg - image viewer", image);
     cv::waitKey(0);
 
     return 0;
